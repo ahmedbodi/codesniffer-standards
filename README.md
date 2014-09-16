@@ -36,6 +36,10 @@ If not, you can link to the ruleset xml files as shown above.
 
 ## Standards
 
+### CakePHP
+The official CakePHP coding standards as phpcs-fixer version. Let the fixer auto-correct the found issues.
+Saves time and energy.
+
 ### MyCakePHP
 A custom standard with a lot of additional sniffs and the following corrections:
 - Doc block indentation correct (same level as methods and attributes for classes)
