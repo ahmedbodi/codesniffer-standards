@@ -1,0 +1,24 @@
+{
+	"name": "dereuromark/codesniffer-standards",
+	"description": "Custom CodeSniffer standards to be used with phpcs-fixer, the auto-fixing branch of phpcs.",
+	"type": "library",
+	"keywords": ["cakephp", "coding standards", "phpcs", "sniff"],
+	"homepage": "https://github.com/dereuromark/codesniffer-standards",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Mark Scherer",
+			"homepage": "http://www.dereuromark.de"
+		}
+	],
+	"minimum-stability": "dev",
+	"require": {
+		"squizlabs/php_codesniffer": "2.*"
+	},
+	"require-dev": {
+		"phpunit/phpunit": "*"
+	},
+	"support": {
+		"source": "https://github.com/dereuromark/codesniffer-standards"
+	}
+}
