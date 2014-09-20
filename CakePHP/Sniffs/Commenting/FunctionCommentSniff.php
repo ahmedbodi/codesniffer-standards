@@ -12,10 +12,15 @@
  * @license   https://github.com/squizlabs/PHP_CodeSniffer/blob/master/licence.txt BSD Licence
  * @link      http://pear.php.net/package/PHP_CodeSniffer
  */
-
+if (class_exists('PHP_CodeSniffer_Standards_AbstractScopeSniff', true) === false) {
+	$error = 'Class PHP_CodeSniffer_Standards_AbstractScopeSniff not found';
+	throw new PHP_CodeSniffer_Exception($error);
+}
+/*
 if (class_exists('PHP_CodeSniffer_CommentParser_FunctionCommentParser', true) === false) {
     throw new PHP_CodeSniffer_Exception('Class PHP_CodeSniffer_CommentParser_FunctionCommentParser not found');
 }
+*/
 
 /**
  * Parses and verifies the doc comments for functions.
@@ -173,6 +178,9 @@ class CakePHP_Sniffs_Commenting_FunctionCommentSniff implements PHP_CodeSniffer_
 
         $comment           = $phpcsFile->getTokensAsString($commentStart, ($commentEnd - $commentStart + 1));
         $this->_methodName = $phpcsFile->getDeclarationName($stackPtr);
+
+				//FIXME: PHP_CodeSniffer_CommentParser_FunctionCommentParser does not exist anymore
+				return;
 
         try {
             $this->commentParser = new PHP_CodeSniffer_CommentParser_FunctionCommentParser($comment, $phpcsFile);
